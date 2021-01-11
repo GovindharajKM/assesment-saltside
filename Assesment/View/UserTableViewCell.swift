@@ -20,10 +20,13 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        self.imageViewUser.layer.cornerRadius = (self.imageViewUser.frame.width)/2
+        
         self.viewBackground.layer.borderWidth = 0.5
         self.viewBackground.layer.borderColor = UIColor.lightGray.cgColor
         self.viewBackground.layer.cornerRadius = 5
+        
+        self.lblTitle.accessibilityIdentifier = "lblTitle"
+        self.viewBackground.accessibilityIdentifier = "viewBackground"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -57,8 +57,7 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.refreshControl.endRefreshing()
         }
-//        textField?.text = ""
-        self.searchBar.getTextField()?.text = "" //self.viewModel.getSearchBarTextField(self.searchBar)
+        self.searchBar.getTextField()?.text = ""
         self.viewModel.initFetch()
     }
     
@@ -116,7 +115,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         userCell.setUpCell(self.viewModel.getCellViewModel(at: indexPath))
-//        userCell.viewBackground.addDropShadowforTableViewCell()
         return userCell
     }
     
